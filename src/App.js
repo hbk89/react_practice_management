@@ -1,4 +1,5 @@
-import { Customer } from "./components/customer.js";
+import { Table, TableBody, TableCell, TableRow, TableHead } from "@material-ui/core";
+import Customer from "./components/customer.js";
 
 const customers = [
   {
@@ -30,9 +31,23 @@ const customers = [
 function App() {
   return (
     <div>
-      {customers.map(c=>{
-        return <Customer data = {c}/>
-      })}
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>ID</TableCell>
+            <TableCell>Photo</TableCell>
+            <TableCell>Name</TableCell>
+            <TableCell>Birth</TableCell>
+            <TableCell>Gender</TableCell>
+            <TableCell>Job</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {customers.map(c=>{
+            return <Customer data={c} />
+          })}
+        </TableBody>
+      </Table>
     </div>
   );
 }
