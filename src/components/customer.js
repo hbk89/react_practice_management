@@ -1,4 +1,6 @@
 import React from 'react'
+import TabelRow from '@material/core/TableRow'
+import TabelCell from '@material/core/TableCell'
 
 function Customerprofile(props) {
     return (
@@ -31,10 +33,6 @@ function Customer(props) {
                 gender = {props.data.gender}
                 job = {props.data.job}
             />
-            {/* <img src = {props.data.image} />
-            <h2>{props.data.name}</h2>
-            <p>{props.data.birthday}</p>
-            <p>{props.data.gender}</p> */}
         </div>
     )
 }
